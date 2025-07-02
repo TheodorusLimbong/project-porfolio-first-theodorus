@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .pause(3000)
     .delete()
-    .type('College Student')
+    .type('Website Developer')
     .pause(3000)
     .delete()
     .go();
