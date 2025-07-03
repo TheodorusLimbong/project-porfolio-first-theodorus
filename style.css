@@ -24,6 +24,11 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #625438;
 }
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
 /* navbar styling */
 nav{
   position: fixed;
@@ -168,17 +173,34 @@ nav.sticky .menu-btn{
   color: #8c7851;
 }
 
+.certifications,
+.contact,
+.organization
+.services
+footer {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+
 /* About Section Styling */
 /* Those Elements Where We Have Apply Same CSS,
  I'm Selecting Directly 'Section Tag' and 'Class'  */
 section{
   padding-top: 40px;
 }
-section .content{
+.content {
   width: 80%;
   margin: 40px auto;
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 .about .about-details{
   display: flex;
   justify-content: space-between;
@@ -317,21 +339,38 @@ section .button button:hover{
 }
 
 /* My Services CSS */
-.services .boxes{
+.services{
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  box-sizing: border-box;
+  background: #f9f4ef;
+  padding: 25px;
+}
+.services .boxes {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center; /* Pusatkan semua box */
+  gap: 25px; /* Jarak antar box */
+  max-width: 1000px; /* Batasi lebar keseluruhan */
+  margin: 0 auto; /* Pusatkan container */
 }
-.services .boxes .box{
-  margin: 20px 0;
-  width: calc(100% / 3 - 20px);
+
+.services .boxes .box {
+  width: 250px; /* Ukuran tetap agar tidak melebar */
   text-align: center;
   border-radius: 12px;
-  padding: 30px 10px;
+  padding: 25px 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
   cursor: default;
   transition: all 0.4s ease;
+  background: #fff;
+  font-size: 13px;
 }
+
 .services .boxes .box:hover{
   background: #8c7851;
   color: #fff;
@@ -362,51 +401,396 @@ section .button button:hover{
   color: #fff;
 }
 /* Contact Me CSS */
-.contact{
-  background: #f9f4ef;
+.contact {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  background: #fff;
+  box-sizing: border-box;
 }
+
+
 .contact .content{
-  margin: 0 auto;
-  padding: 30px 0;
+  padding: 40px 0;
 }
-.contact .text{
-  width: 80%;
+
+.contact-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
   text-align: center;
+  background-color: #fff;
+}
+
+.contact .title span {
+  color: #020826;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.contact .text p {
+  font-size: 18px;
+  color: #020826;
+  margin-top: 10px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact .button {
+  margin-top: 20px;
+}
+
+.contact .button button {
+  background-color: #8c7851;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact .button button:hover {
+  background-color: #625438;
+}
+
+
+.cert-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1600px;
   margin: auto;
 }
 
-/* Footer CSS */
-footer{
-  background: #8c7851;
-  padding: 15px 0;
+
+
+.cert-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 280px;
+  padding: 20px;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  transition: transform 0.2s;
 }
+
+.cert-card:hover {
+  transform: translateY(-5px);
+}
+
+.cert-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.cert-card h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+
+.cert-type {
+  background-color: #f9f4ef;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.cert-card button {
+  margin-top: 10px;
+  padding: 6px 14px;
+  background: #8c7851; /* warna yang diminta */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.organization {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  background-color: #f9f4ef;
+  padding: 60px 20px;
+  overflow: visible;
+}
+
+.organization .cont {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+.organization .title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.org-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.6s ease;
+  z-index: 0;
+}
+
+.org-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1;
+}
+
+/* Tambahan agar container org-wrapper tidak berubah tinggi saat ganti slide */
+.org-wrapper {
+  position: relative;
+  min-height: 400px;
+}
+
+.org-content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.org-image-box {
+  background: #000;
+  border-radius: 8px;
+  max-width: 600px;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 360px;
+}
+
+.img-carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.org-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.97);
+  display: block;
+  opacity: 0;
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+
+}
+
+.org-img.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 2;
+}
+
+/* Overlay Navigasi */
+.img-nav {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 40px;
+  z-index: 10;
+}
+
+/* Tombol Panah */
+.img-prev,
+.img-next {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.img-prev:hover,
+.img-next:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Dots */
+.img-dots {
+  display: flex;
+  gap: 6px;
+}
+.img-dot {
+  width: 10px;
+  height: 10px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.img-dot.active {
+  background: #fff;
+}
+.org-desc {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.org-desc h3 {
+  margin-top: 0;
+}
+
+/* === ORGANIZATION NAVIGATION BUTTONS === */
+.org-prev,
+.org-next {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.org-prev {
+  left: -50px;
+}
+
+.org-next {
+  right: -50px;
+}
+
+.org-prev:hover,
+.org-next:hover {
+  background-color: #555;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .org-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .org-desc {
+    text-align: center;
+  }
+
+  .org-img {
+    max-height: 200px;
+  }
+
+  .org-prev {
+    left: 10px;
+  }
+
+  .org-next {
+    right: 10px;
+  }
+
+  .org-wrapper {
+    padding: 0 20px;
+  }
+}
+
+
+
+
+
+
+/* Footer CSS */
+footer {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  background: #8c7851;
+  padding: 18px 0;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
 footer .text span{
   font-size: 17px;
   font-weight: 400;
   color: #fff;
 }
-footer .text span a{
-  font-weight: 500;
-  color: #FFF;
+footer .text span a {
+  color: #fff;
+  font-weight: 600;
 }
 footer .text span a:hover{
   text-decoration: underline;
 }
 /* Scroll TO Top Button CSS */
-.scroll-button a{
+.scroll-button a {
   position: fixed;
   bottom: 20px;
   right: 20px;
   color: #fff;
   background: #8c7851;
-  padding: 7px 12px;;
+  padding: 7px 12px;
   font-size: 18px;
   border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.15);
-  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* perbaikan shadow */
+  display: none; /* akan diubah ke block dengan JavaScript */
+  z-index: 999;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
 }
+
 
 /* Responsive Media Query */
 @media (max-width: 1190px) {
